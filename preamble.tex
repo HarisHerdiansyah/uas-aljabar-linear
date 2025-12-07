@@ -1,0 +1,49 @@
+% Packages untuk bahasa Indonesia
+\usepackage[indonesian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Packages matematika
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+% Packages untuk gambar dan grafik
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% Packages untuk layout
+\usepackage{geometry}
+\geometry{
+    left=2cm, right=2cm, top=2cm, bottom=2cm
+}
+\usepackage{setspace}
+\onehalfspacing
+
+% Packages untuk hyperlink dan referensi
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+% Packages untuk kode (jika diperlukan)
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Theorem environments
+\newtheorem{theorem}{Teorema}[chapter]
+\newtheorem{definition}{Definisi}[chapter]
+\newtheorem{example}{Contoh}[chapter]
+\newtheorem{solution}{Pembahasan}[chapter]
+
+% Custom commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
