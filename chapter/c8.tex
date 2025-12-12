@@ -1,0 +1,142 @@
+% Pertemuan 8
+\section*{Pertemuan 8}
+\begin{enumerate}
+	\item Tentukan apakah pasangan vektor di $\mathbb{R}^4$ berikut saling ortogonal
+	\[\mathbf{u}=(2,-3,1,4) \text{ dan } \mathbf{v}=(3,2,0,-1)\]
+	
+	\item Tentukan persamaan bidang yang melalui titik $P(2,-1,4)$ dan memiliki vektor normal $\mathbf{n}=(-3,5,2)$ dan tuliskan hasilnya dalam bentuk umum $ax+by+cz=d$
+	
+	\item Tunjukkan bahwa kedua bidang berikut saling sejajar.
+	\begin{itemize}
+		\item $2x-3y+4z=5$
+		\item $-4x+6y-8z=10$
+	\end{itemize}
+	
+	\item Tunjukkan bahwa kedua bidang berikut saling tegak lurus.
+	\begin{itemize}
+		\item $x+2y-3z=4$
+		\item $4x+y+2z=7$
+	\end{itemize}
+	
+	\item Hitung panjang proyeksi vektor $\mathbf{u}$ ke arah vektor $\mathbf{v}$ jika diketahui:
+	\[\mathbf{u}=(4,-1,3)\text{ dan }\mathbf{v}=(2,2,1)\]
+	
+	\item Diketahui vektor $\mathbf{u}=(2,5)$ dan vektor $\mathbf{a}=(4,3)$. Tentukan:
+	\begin{itemize}
+		\item Komponen vektor $\mathbf{u}$ yang sejajar dengan $\mathbf{a}$ (proyeksi vektor $\text{proj}_{\mathbf{a}}\mathbf{u}$)
+		\item  Komponen vektor dari $\mathbf{u}$ yang ortogonal terhadap $\mathbf{a}$ (vektor sisa).
+	\end{itemize}
+	
+	\item Hitung jarak tegak lurus dari titik $R(3,-4)$ ke garis $3x+4y-10=0$
+	
+	\item Hitung jarak tegak lurus dari titik $Q(1,-2,3)$ ke bidang $2x-y+2z-6=0$
+\end{enumerate}
+
+Jawaban:
+\begin{enumerate}
+	\item Dua vektor dikatakan saling ortogonal jika hasil kali titik (\emph{dot product}) keduanya bernilai 0.
+	\[\mathbf{u} \cdot \mathbf{v} = (2)(3) + (-3)(2) + (1)(0) + (4)(-1)\]
+	\[\mathbf{u} \cdot \mathbf{v} = 6 + (-6) + 0 + (-4)\]
+	\[\mathbf{u} \cdot \mathbf{v} = 6 - 6 + 0 - 4\]
+	\[\mathbf{u} \cdot \mathbf{v} = -4\]
+	$\therefore$ Karena $\mathbf{u}\cdot\mathbf{v}\neq0$ maka vektor tidak saling ortogonal.
+	
+	\item Persamaan bidnag dicari menggunakan rumus bentuk titik-normal:
+	\[a(x - x_0) + b(y - y_0) + c(z - z_0) = 0\]
+	Di mana:
+	\begin{itemize}
+		\item $(a,b,c)$ adalah vektor normal $\mathbf{n}=(-3,5,2)$
+		\item $(x_0,y_0,z_0)$ adalah koordinat titik yang dilalui $P(2,-1,4)$
+	\end{itemize}
+	Substitusi nilai:per
+	\[-3(x - 2) + 5(y - (-1)) + 2(z - 4) = 0\]
+	\[-3(x - 2) + 5(y + 1) + 2(z - 4) = 0\]
+	Distribusi perkalian:
+	\[-3x + 6 + 5y + 5 + 2z - 8 = 0\]
+	\[-3x + 5y + 2z + (6 + 5 - 8) = 0\]
+	\[-3x + 5y + 2z + 3 = 0\]
+	Dalam bentuk umum menjadi:
+	\[-3x + 5y + 2z = -3 \text{ atau } 3x - 5y - 2z = 3\]
+	
+	\item Dua bidang dikatakan sejajar jika salah satu vektor normal tersebut adalah kelipatan skalar dari vektor normal yang lain.\\[0.5cm]
+	Vektor normal:
+	\[\mathbf{n}_1=(2,-3,4) \text{ dan } \mathbf{n}_2(-4,6,-8)\]
+	Periksa hubungan kelipatan skalar:
+	\begin{itemize}
+		\item Komponen $x$: $\frac{-4}{2}=-2$
+		\item Komponen $y$: $\frac{6}{-3}=-2$
+		\item Komponen $z$: $\frac{-8}{4}=-2$	
+	\end{itemize}
+	Didapat nilai skalar $k=-2$:
+	\[(-4, 6, -8) = -2(2, -3, 4)\]
+	\[\mathbf{n}_2 = -2\mathbf{n}_1\]
+	$\therefore$ Karena $\mathbf{n}_2$ merupakan kelipatan skalar dari $\mathbf{n}_1$ maka kedua bidang sejajar.
+	
+	\item Dua bidang dikatakan tegak lurus (ortogonal) hasil kali titik (\emph{dot product}) dari kedua vektor normal bidang hasilnya 0.\\[0.5cm]
+	Identifikasi vektor normal:
+	\[x+2y-3z=4 \longrightarrow \mathbf{n}_1=(1,2,-3)\]
+	\[4x+y+2z=7 \longrightarrow \mathbf{n}_2=(4,1,2)\]
+	Hitung hasil kali titik:
+	\[\mathbf{n}_1 \cdot \mathbf{n}_2 = (1)(4) + (2)(1) + (-3)(2)\]
+	\[\mathbf{n}_1 \cdot \mathbf{n}_2 = 4 + 2 - 6\]
+	\[\mathbf{n}_1 \cdot \mathbf{n}_2 = 0\]
+	$\therefore$ Karena hasil kali titik bernilai 0, maka kedua bidang saling tegak lurus.
+	
+	\item Persamaan untuk mencari panjang proyeksi:
+	\[||\text{proj}_{\mathbf{v}}\mathbf{u}|| = \frac{|\mathbf{u} \cdot \mathbf{v}|}{||\mathbf{v}||}\]
+	Hitung hasil kali titik $\mathbf{u}\cdot\mathbf{v}:$
+	\[\mathbf{u} \cdot \mathbf{v} = (4)(2) + (-1)(2) + (3)(1)\]
+	\[\mathbf{u} \cdot \mathbf{v} = 8 - 2 + 3\]
+	\[\mathbf{u} \cdot \mathbf{v} = 9\]
+	Hitung panjang vektor $\mathbf{v}$:
+	\[||\mathbf{v}|| = \sqrt{v_1^2 + v_2^2 + v_3^2}\]
+	\[||\mathbf{v}|| = \sqrt{2^2 + 2^2 + 1^2}\]
+	\[||\mathbf{v}|| = \sqrt{4 + 4 + 1}\]
+	\[||\mathbf{v}|| = \sqrt{9}\]
+	\[||\mathbf{v}|| = 3\]
+	Hitung panjang proyeksi:
+	\[||\text{proj}_{\mathbf{v}}\mathbf{u}|| = \frac{|9|}{3}\]
+	\[||\text{proj}_{\mathbf{v}}\mathbf{u}|| = \frac{9}{3}\]
+	\[||\text{proj}_{\mathbf{v}}\mathbf{u}|| = 3\]
+	
+	\item
+	\begin{itemize}
+		\item Persamaan untuk mencari proyeksi vektor:
+		\[\text{proj}_{\mathbf{a}}\mathbf{u} = \frac{\mathbf{u} \cdot \mathbf{a}}{||\mathbf{a}||^2} \mathbf{a}\]
+		Hitung hasil kali titik $(\mathbf{u}\cdot\mathbf{a}):$
+		\[\mathbf{u}\cdot\mathbf{a} = (2)(4) + (5)(3) = 23\]
+		Hitung kuadrat panjang vektor $\mathbf{a}:$
+		\[||a||^2=(\sqrt{4^2 + 3^2})^2\]
+		\[||a||^2=4^2 + 3^2\]
+		\[||a||^2=16 + 9 = 25\]
+		Hitung proyeksi vektor:
+		\[\text{proj}_{\mathbf{a}}\mathbf{u} = \frac{23}{25} (4, 3) = \left( \frac{92}{25}, \frac{69}{25} \right)\]
+		
+		\item Komponen ortogonal adalah vektor asal dikurangi vektor proyeksi:
+		\[\mathbf{w}=\mathbf{u}-\text{proj}_{\mathbf{a}}\mathbf{u}\]
+		\[\mathbf{w}=(2,5)-\left(\frac{92}{25},\frac{69}{25}\right)\]
+		\[\mathbf{w}=\left(2-\frac{92}{25},5-\frac{69}{25}\right)\]
+		\[\mathbf{w}=\left(\frac{50}{25}-\frac{92}{25},\frac{125}{25}-\frac{69}{25}\right)\]
+		\[\mathbf{w}=\left(-\frac{42}{25},\frac{56}{25}\right)\]
+	\end{itemize}
+	
+	\item Persamaan jarak dari titik $(x_{1},y_{1})$ ke garis $Ax+By+C=0$ adalah:
+	\[D = \frac{|Ax_1 + By_1 + C|}{\sqrt{A^2 + B^2}}\]
+	Identifikasi nilai:
+	\[x_1 = 3, y_1 = -4, A = 3, B = 4, C = -10\]
+	Substitusi ke persamaan:
+	\[D = \frac{|3(3)+4(-4)-10|}{\sqrt{3^2 + 4^2}}\]
+	\[D = \frac{|17|}{\sqrt{25}}\]
+	\[D = \frac{17}{5}=3.4\]
+	
+	\item Persamaan jarak dari titik $(x_1,y_1,z_1)$ ke bidang $2x-y+2z-6=0$ adalah:
+	\[D = \frac{|ax_1 + by_1 + cz_1 + d|}{\sqrt{a^2 + b^2 + c^2}}\]
+	Identifikasi nilai:
+	\begin{itemize}
+		\item Titik $(x_1,y_1,z_1)$: $x_1=1, y_1=-2, z_1=3$
+		\item Koefisien bidang: $a=2, b=-1, c=2, d=-6$
+	\end{itemize}
+	Substitusi ke persamaan:
+	\[D = \frac{|2(1)+(-1)(-2)+2(3)-6|}{\sqrt{2^2 + (-1)^2 + 4^2}}\]
+	\[D = \frac{|4|}{\sqrt{9}} = \frac{4}{3}\]
+\end{enumerate}

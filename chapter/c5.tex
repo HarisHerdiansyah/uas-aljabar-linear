@@ -1,0 +1,179 @@
+% Pertemuan 5
+\section*{Pertemuan 5}
+\begin{enumerate}
+	\item Selesaikan sistem persamaan linear berikut
+	\[
+		\begin{cases}
+			x_{1} + 2x_{2} - x_{3} + 3x_{4} = 4 \\
+			2x_{1} + 4x_{2} - 2x_{3} + 7x_{4} = 10 \\
+			-x_{1} - 2x_{2} + x_{3} - 4x_{4} = -6
+		\end{cases}	
+	\]	
+	
+	\item Tentukan nilai konstanta $k$ agar sistem persamaan berikut:
+	\[
+		\begin{cases}
+			x + y + kz = 1 \\ x + ky + z = 1 \\ kx + y + z = 1
+		\end{cases}
+	\]
+	\begin{enumerate}
+		\renewcommand{\labelenumi}{\alph{enumi}.}
+		\item Memiliki tepat satu solusi.
+		\item Tidak memiliki solusi.
+		\item Memiliki solusi tak hingga.
+	\end{enumerate}
+\end{enumerate}
+
+Jawab:
+\begin{enumerate}
+	\item Bentuk augmented matrix:
+	\[
+		\left[
+		\begin{array}{cccc|c}
+			1 & 2 & -1 & 3 & 4 \\
+			2 & 4 & -2 & 7 & 10 \\
+			-1 & -2 & 1 & -4 & -6
+		\end{array}
+		\right]
+	\]
+	Lakukan operasi baris elementer:
+	\[
+		\left[
+		\begin{array}{cccc|c}
+			1 & 2 & -1 & 3 & 4 \\
+			2 & 4 & -2 & 7 & 10 \\
+			-1 & -2 & 1 & -4 & -6
+		\end{array}
+		\right]
+		\xrightarrow{-2B1+B2}
+		\left[
+		\begin{array}{cccc|c}
+			1 & 2 & -1 & 3 & 4 \\
+			0 & 0 & 0 & 1 & 2 \\
+			-1 & -2 & 1 & -4 & -6
+		\end{array}
+		\right]
+		\xrightarrow{B1+B3}
+		\left[
+		\begin{array}{cccc|c}
+			1 & 2 & -1 & 3 & 4 \\
+			0 & 0 & 0 & 1 & 2 \\
+			0 & 0 & 0 & -1 & -2
+		\end{array}
+		\right]
+	\]
+	\[
+		\xrightarrow{-3B2+B1}
+		\left[
+		\begin{array}{cccc|c}
+			1 & 2 & -1 & 0 & -2 \\
+			0 & 0 & 0 & 1 & 2 \\
+			0 & 0 & 0 & -1 & -2
+		\end{array}
+		\right]
+		\xrightarrow{B2+B3}
+		\left[
+		\begin{array}{cccc|c}
+			1 & 2 & -1 & 0 & -2 \\
+			0 & 0 & 0 & 1 & 2 \\
+			0 & 0 & 0 & 0 & 0
+		\end{array}
+		\right]
+	\]
+	Interpretasi solusi:
+	\[x_{4} = 2\]
+	\[x_{1} + 2x_{2} - x_{3} = -2\]
+	\[x_{1} = -2 - 2x_{2} + x_{3}\]
+	Misal $x_{2} = s$ dan $x_{3} = t$, maka:
+	\[x_{1} = -2 - 2s + t\]
+	Solusi persamaan:
+	\[
+		\begin{bmatrix}
+			x_{1} \\ x_{2} \\ x_{3} \\ x_{4}
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			-2 - 2s -+ t \\ s \\ t \\ 2
+		\end{bmatrix}	
+	\]
+	\[
+		\begin{bmatrix}
+			x_{1} \\ x_{2} \\ x_{3} \\ x_{4}
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+			-2 \\ 0 \\ 0 \\ 2
+		\end{bmatrix} +
+		s\begin{bmatrix}
+			-2 \\ 1 \\ 0 \\ 0
+		\end{bmatrix} +
+		t\begin{bmatrix}
+			1 \\ 0 \\ 1 \\ 0
+		\end{bmatrix}
+	\]
+	
+	\item Penyelesaian dilakukan dengan analisis determinan. Jika $det(A)\neq0$, maka didapat solusi tunggal. Jika $det(A)=0$, maka perlu diperiksa lebih lanjut apakah terdapat tak hingga solusi atau tidak ada solusi.
+	
+	Bentuk matriks koefisien:
+	\[
+		A = \begin{bmatrix}
+			1 & 1 & k \\ 1 & k & 1 \\ k & 1 & 1
+		\end{bmatrix}			
+	\]
+	Hitung determinan:
+	\[det(A)=1(k-1)-1(1-k)+k(1-k^2)\]
+	\[=k-1-1+k+k+k^3\]
+	\[=-k^3+3k-2\]
+	Kalikan dengan $-1$
+	\[k^3-3k+2\]
+	Cari pembuat $0$ dengan mencari akar persamaan, pencarian akar menggunakan Metode Horner dan perlu diketahui salah satu bilangan pembuat nol dengan mengambil asumsi dari faktor konstanta (pada kasus ini adalah $2$), yaitu $\{1,2\}$.\\
+	Ambil $1$ terlebih dahulu.
+	\[(1)^3-3(1)+2=1-3+2=0 \hspace{1cm} \text{\emph{1 adalah akar}} \]
+	Ambil koefisien persamaan, yaitu $\{1,0,-3,2\}$:
+	\[
+		\begin{array}{c|ccccc}
+		1 & 1 & 0 & -3 & 2 & \\
+		& & 1 & 1 & -2 & + \\
+		\hline
+		& 1 & 1 & -2 & 0
+		\end{array}
+	\]
+	Didapatkan koefiesien baru $\{1, 1, -2\}$, buat persamaan baru:
+	\[k^2+k-2=0\]
+	Lanjutkan pencarian pembuat nol determinan:
+	\[(k-1)(k^2+k-2)=0\]
+	\[(k-1)(k+2)(k-1)=0\]
+	Maka didapat akar-akar persamaan (pembuat nol), yaitu $k=1$ atau $k=-2$.
+	
+	Analisis kasus
+	\begin{enumerate}
+		\renewcommand{\labelenumi}{\alph{enumi}.}
+		\item Persamaan memiliki solusi tunggal/unik jika $det(A)\neq0$ maka nilai $k$ yang salah adalah $k\neq1$ dan $k\neq-2$
+		\item Uji salah satu akar, misal $k=1$
+		\[
+			\begin{cases}
+				x + y + z = 1 \\ x + y + z = 1 \\ x + y + z = 1
+			\end{cases}		
+		\]
+		Semua persamaan identik dan terdapat dua variabel bebas, maka SPL memiliki tak hingga solusi untuk $k=1$
+		
+		\item Uji $k=-2$
+		Buat augmented matrix
+		\[
+			\left[
+			\begin{array}{ccc|c}
+				1 & 1 & -2 & 1 \\ 1 & -2 & 1 & 1 \\ -2 & 1 & 1 & 1
+			\end{array}
+			\right]				
+		\]
+		Lakukan operasi baris elementer hingga didapat bentuk matriks eselon baris tereduksi:
+		\[
+			\left[
+			\begin{array}{ccc|c}
+				1 & 0 & -1 & 1 \\ 0 & 1 & -1 & 0 \\ 0 & 0 & 0 & 3
+			\end{array}
+			\right]
+		\]
+		Terdapat inkonsisten pada persamaan, sehingga SPL tidak memiliki solusi ketika $k=-2$
+	\end{enumerate}
+\end{enumerate}

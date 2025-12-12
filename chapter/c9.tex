@@ -1,0 +1,133 @@
+% Pertemuan 9
+\section*{Pertemuan 9}
+\begin{enumerate}
+	\item Tentukan basis ruang null dan basis ruang baris dari matriks A
+	\[
+		A=\begin{bmatrix}
+			1 & -2 & 1 & 3 \\ 2 & -4 & 3 & 7 \\ -1 & 2 & 0 & -2
+		\end{bmatrix}			
+	\]
+	\item Tentukan basis ruang baris dan basis ruang kolom melalui inspeksi
+	\[
+		R=\begin{bmatrix}
+			1 & 5 & 0 & 2 & -1 \\
+			0 & 0 & 1 & -3 & 4 \\
+			0 & 0 & 0 & 1 & 7 \\
+			0 & 0 & 0 & 0 & 0
+		\end{bmatrix}			
+	\]
+	\item Tentukan rank dan nullity dari matriks B
+	\[
+		B=\begin{bmatrix}
+			1 & 2 & -1 & 4 \\ 2 & 4 & -2 & 8 \\ 1 & 3 & 2 & 0 \\ -1 & -1 & 4 & -8
+		\end{bmatrix}			
+	\]
+\end{enumerate}
+
+Jawaban:
+\begin{enumerate}
+	\item Lakukan operasi baris elementer hingga didapat bentuk matriks eselon baris:
+	\[
+		\begin{bmatrix}
+			1 & -2 & 1 & 3 \\ 2 & -4 & 3 & 7 \\ -1 & 2 & 0 & -2
+		\end{bmatrix}
+		\xrightarrow{\substack{-2B1+B2 \\ B1 + B3}}
+		\begin{bmatrix}
+			1 & -2 & 1 & 3 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 1 & 1
+		\end{bmatrix}
+		\xrightarrow{-B2+B3}
+		\begin{bmatrix}
+			1 & -2 & 1 & 3 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 0
+		\end{bmatrix}
+	\]
+	Ambil baris tidak nol sebagai basis ruang baris:
+	\[Row(A)=\{(1,-2,1,3),(0,0,1,1)\}\]
+	Menentukan basis ruang null:
+	\[x_3 + x_4 = 0 \longrightarrow x_3 = -x_4\]
+	\[x_1 - 2x_2 + x_3 + 3x_4 = 0\]
+	\[x_1 = 2x_2 - x_3 - 3x_4\]
+	Misal $x_2 = s$ dan $x_4 = t$:
+	\[x_3 = -t\]
+	\[x_1 = 2s - (-t) - 3t\]
+	\[x_1 = 2s - 2t\]
+	Vektor solusi:
+	\[
+		\begin{bmatrix}
+			x_1 \\ x_2 \\ x_3 \\ x_4
+		\end{bmatrix}=
+		\begin{bmatrix}
+			2s - 2t \\ s \\ -t \\ t		
+		\end{bmatrix}=
+		s\begin{bmatrix}
+			2 \\ 1 \\ 0 \\ 0
+		\end{bmatrix}+
+		t\begin{bmatrix}
+			-2 \\ 0 \\ -1 \\ 1
+		\end{bmatrix}
+	\]
+	\[
+		Null(A)=
+		\left\{
+		\begin{bmatrix}
+			2 \\ 1 \\ 0 \\ 0
+		\end{bmatrix},
+		\begin{bmatrix}
+			-2 \\ 0 \\ -1 \\ 1
+		\end{bmatrix}
+		\right\}	
+	\]
+	
+	\item Basis ruang baris diambil dari baris yang membuat pivot dan basis ruang kolom diambil dari kolom yang memuat pivot.
+	\[Row(B)=\{(1,5,0,2,-1),(0,0,1,-3,4),(0,0,0,1,7)\}\]
+	\[
+		Col(B)=\left\{
+		\begin{bmatrix}
+			1 \\ 0 \\ 0 \\ 0
+		\end{bmatrix},
+		\begin{bmatrix}
+			0 \\ 1 \\ 0 \\ 0
+		\end{bmatrix},
+		\begin{bmatrix}
+			2 \\ -3 \\ 1 \\ 0
+		\end{bmatrix}
+		\right\}
+	\]
+	
+	\item Lakukan operasi baris elementer
+	\[
+		\begin{bmatrix}
+			1 & 2 & -1 & 4 \\
+			2 & 4 & -2 & 8 \\
+			1 & 3 & 2 & 0 \\
+			-1 & -1 & 4 & -8
+		\end{bmatrix}	
+		\xrightarrow{\substack{-2B1+B2 \\ -B1+B3 \\ B1+B4}}
+		\begin{bmatrix}
+			1 & 2 & -1 & 4 \\
+			0 & 0 & 0 & 0 \\
+			0 & 1 & 3 & -4 \\
+			0 & 1 & 3 & -4
+		\end{bmatrix}
+		\xrightarrow{\text{B2}\leftrightarrow\text{B3}}	
+		\begin{bmatrix}
+			1 & 2 & -1 & 4 \\
+			0 & 1 & 3 & -4 \\
+			0 & 0 & 0 & 0 \\
+			0 & 1 & 3 & -4
+		\end{bmatrix}			
+	\]
+	\[
+		\xrightarrow{-B2+B4}
+		\begin{bmatrix}
+			1 & 2 & -1 & 4 \\
+			0 & 1 & 3 & 4 \\
+			0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0
+		\end{bmatrix}			
+	\]
+	Jumlah baris tidak nol:
+	\[Rank(B)=2\]
+	Menentukan nullity:
+	\[\text{Total kolom }(n) = 4\]
+	\[Nullity = Rank(B) - n = 4 - 2 = 2\]
+\end{enumerate}
