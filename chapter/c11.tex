@@ -1,0 +1,91 @@
+% Pertemuan 11
+\section*{Pertemuan 11}
+\begin{enumerate}
+	\item Misalkan $T:\mathbb{R}^3\rightarrow\mathbb{R}^2$ adalah suatu pemetaan yang didefinisikan oleh rumus:
+	\[T(x,y,z)=(x-2y,2y+z)\]
+	\begin{enumerate}
+		\renewcommand{\labelenumi}{\alph{enumi}.}
+		\item Tunjukkan bahwa $T$ adalah transformasi linear
+		\item Tentukan basis dari Kernel $T$
+	\end{enumerate}
+	
+	\item Misalkan $T:\mathbb{R}^3\rightarrow\mathbb{R}^3$ adalah transformasi linear yang didefinisikan oleh perkalian matriks $T(x)=A(x)$, di mana:
+	\[
+		A=\begin{bmatrix}
+			1&-1&2\\-2&2&-4\\0&1&3
+		\end{bmatrix}			
+	\]
+	\begin{enumerate}
+		\renewcommand{\labelenumi}{\alph{enumi}.}
+		\item Tentukan Rank dari transformasi $T$
+		\item Tentukan Nullity dari transformasi $T$
+	\end{enumerate}
+\end{enumerate}
+
+Jawaban:
+\begin{enumerate}
+	\item
+	\begin{enumerate}
+		\renewcommand{\labelenumi}{\alph{enumi}.}
+		\item Sebuah transformasi linear harus memenuhi dua syarat, yaitu aditivitas $(T(\mathbf{u}+\mathbf{v})=T(\mathbf{u})+T(\mathbf{v}))$ dan homogenitas $(T(k\mathbf{u})=kT(\mathbf{u}))$
+		\begin{itemize}
+			\item Aditivitas:\\
+			Misalkan $\mathbf{u} = (x_1, y_1, z_1)$ dan $\mathbf{v} = (x_2, y_2, z_2)$
+			\[T(\mathbf{u}+\mathbf{v}) = T(x_1+x_2,y_1+y_2,z_1+z_2)\]
+			\[= ((x_1+x_2)-2(y_1+y_2), 2(y_1+y_2)+(z_1+z_2))\]
+			\[= ((x_1-2y_1)+(x_2-2y_2), (2y_1+z_1)+(2y_2+z_2))\]
+			\[= T(\mathbf{u}) + T(\mathbf{v})\]
+			\item Homogenitas:
+			\[T(kx,ky,kz)=(kx-2ky,2ky+kz)\]
+			\[= k(x-2y,2y+z)\]
+			\[= kT(x,y,z)\]
+			$\therefore T$ adalah transformasi linear. 
+		\end{itemize}
+		
+		\item Kernel adalah himpunan vektor di mana hasil transformasi adalah nol ($T(x,y,z)=(0,0)$)
+		\[
+			\begin{cases}
+				x-2y=0 \longrightarrow x = 2y \\
+				2y+z=0 \longrightarrow z = -2y
+			\end{cases}		
+		\]
+		Misal $y=s$:
+		\[
+			\begin{bmatrix}
+				x\\y\\z
+			\end{bmatrix}=
+			\begin{bmatrix}
+				2s\\s\\-2s
+			\end{bmatrix}=
+			s\begin{bmatrix}
+				2\\1\\-2
+			\end{bmatrix}			
+		\]
+		$\therefore Ker(T)=\{(2,1,-2)\}$
+	\end{enumerate}
+	
+	\item Ubah matriks A ke bentuk matriks eselon baris sebelum mencari rank dan nullity.
+	\[
+		\begin{bmatrix}
+			1 & -1 & 2 \\ -2 & 2 & -4 \\ 0 & 1 & 3
+		\end{bmatrix}			
+		\xrightarrow{2B1+B2}
+		\begin{bmatrix}
+			1 & -1 & 2 \\ 0 & 0 & 0 \\ 0 & 1 & 3
+		\end{bmatrix}
+		\xrightarrow{\text{B2}\leftrightarrow\text{B3}}
+		\begin{bmatrix}
+			1 & -1 & 2 \\ 0 & 1 & 3 \\ 0 & 0 & 0
+		\end{bmatrix}
+	\]
+	\begin{enumerate}
+		\renewcommand{\labelenumi}{\alph{enumi}.}
+		\item $Rank(T)$ diambil dari jumlah baris tidak nol $\{(1,-1,2),(0,1,3)\}$ sehingga $Rank(T)=2$.
+		\item $Nullity(T)$ diambil dari jumlah kolom yang tidak memenuhi pivot $\{[\text{2 3 0}]^T\}$ sehingga $Nullity(T)=1$
+	\end{enumerate}
+	
+	Adapun teorema dimensi, di mana $dim(T)=Rank(T)+Nullity(T)$ dan $dim(T)=3$ (karena domainnya $\mathbb{R}^3$), maka:
+	\[dim(T)=Rank(T)+Nullity(T)\]
+	\[3=2+1\]
+	$\therefore$ Teorema dimensi terpenuhi.
+\end{enumerate}

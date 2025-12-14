@@ -1,0 +1,141 @@
+% Pertemuan 10
+\section*{Pertemuan 10}
+\begin{enumerate}
+	\item Diketahui matriks A
+	\[A=\begin{bmatrix}4&0&1\\-2&1&0\\-2&0&1\end{bmatrix}\]
+	Tentukan:
+	\begin{enumerate}
+		\renewcommand{\labelenumi}{\alph{enumi}.}
+		\item Persamaan karakteristik dari matriks $A$.
+		\item Nilai-nilai eigen dari matriks $A$.
+		\item Basis ruang eigen yang bersesuaian dengan setiap nilai eigen.
+	\end{enumerate}
+	
+	\item Diketahui matriks B
+	\[B=\begin{bmatrix}2&0&0\\0&3&1\\0&1&3\end{bmatrix}\]
+	Tentukan:
+	\begin{enumerate}
+		\renewcommand{\labelenumi}{\alph{enumi}.}
+		\item Tentukan matriks $P$ yang mendiagonalisasi $B$.
+		\item Tentukan matriks diagonal $D$.
+	\end{enumerate}
+\end{enumerate}
+
+Jawaban:
+\begin{enumerate}
+	\item
+	\begin{enumerate}
+		\renewcommand{\labelenumi}{\alph{enumi}.}
+		\item Persamaan karakteristik didapat dari 
+		\[det\left(
+			\begin{bmatrix}
+				\lambda-4 & 0 & -1 \\ 2 & \lambda-1 & 0 \\ 2 & 0 & \lambda-1
+			\end{bmatrix}
+		\right)=0\]
+		Lakukan ekspansi kofaktor sepanjang kolom ke-2:
+		\[(\lambda-1) \cdot \det \begin{bmatrix} \lambda-4 & -1 \\ 2 & \lambda-1 \end{bmatrix} = 0\]
+		\[(\lambda-1) [(\lambda-4)(\lambda-1) - (-1)(2)] = 0\]
+		\[(\lambda-1) [\lambda^2 - 5\lambda + 4 + 2] = 0\]
+		\[(\lambda-1) [\lambda^2 - 5\lambda + 6] = 0\]
+		\[(\lambda-1)(\lambda-2)(\lambda-3) = 0\]
+		
+		\item Berdasarkan hasil pemfaktoran, nilai-nilai eigennya adalah:
+		\[\lambda_1=1,\lambda_2=2,\lambda_3=3\]
+		
+		\item Basis ruang eigen
+	\end{enumerate}
+	
+	\item
+	\begin{enumerate}
+		\renewcommand{\labelenumi}{\alph{enumi}.}
+		\item Matriks $P$ dibangun dari vektor-vektor eigen sehingga cari terlebih dahulu vektor-vektor eigennya.
+		\[
+			I\lambda-B=\begin{bmatrix}
+				\lambda-2 & 0 & 0 \\ 0 & \lambda-3 & -1 \\ 0 & -1 & \lambda-3
+			\end{bmatrix}					
+		\]
+		Cari determinan $det(I\lambda-B):$
+		\[
+			det(I\lambda-B)=(\lambda-2)\cdot
+			\begin{vmatrix}
+				\lambda-3 & 1 \\ 1 & \lambda-3			
+			\end{vmatrix}					
+		\]
+		\[det(I\lambda-B)=(\lambda-2)((\lambda-3)(\lambda-3)-1)\]
+		\[det(I\lambda-B)=(\lambda-2)(\lambda^2-6\lambda+9-1)\]
+		\[det(I\lambda-B)=(\lambda-2)(\lambda^2-6\lambda+8)\]
+		\[det(I\lambda-B)=(\lambda-2)(\lambda-2)(\lambda-4)\]
+		Didapat nilai eigennya adalah $\lambda_1=2,\lambda_2=2,\lambda_3=4$. Tentukan vektor-vektor eigennya:
+		\begin{itemize}
+			\item $\lambda=2$
+			\[
+				\begin{bmatrix}
+					0&0&0\\0&-1&-1\\0&-1&-1
+				\end{bmatrix}
+				\begin{bmatrix}
+					x\\y\\z
+				\end{bmatrix}=
+				\begin{bmatrix}
+					0\\-y-z\\-y-z
+				\end{bmatrix}											
+			\]
+			Misal $x=s, z=t$:
+			\[-y-t=0\]\[y=-t\]
+			Vektor eigen untuk $\lambda=2$:
+			\[
+				\begin{bmatrix}
+					x\\y\\z
+				\end{bmatrix}=
+				\begin{bmatrix}
+					s\\-t\\t
+				\end{bmatrix}=
+				s\begin{bmatrix}
+					1\\0\\0
+				\end{bmatrix}+
+				t\begin{bmatrix}
+					0\\-1\\1
+				\end{bmatrix}				
+			\]
+			
+			\item $\lambda=4$
+			\[
+				\begin{bmatrix}
+					2&0&0\\0&1&-1\\0&-1&1
+				\end{bmatrix}			
+				\begin{bmatrix}
+					x\\y\\z
+				\end{bmatrix}=
+				\begin{bmatrix}
+					2x\\y-z\\-y+z
+				\end{bmatrix}										
+			\]
+			\[2x=0 \longrightarrow x=0 \]
+			\[y-z=0 \longrightarrow y=z \]
+			Misal $z=t$, maka $y=t$. Vektor eigen untuk $\lambda=4$:
+			\[
+				\begin{bmatrix}
+					x\\y\\z
+				\end{bmatrix}=
+				\begin{bmatrix}
+					0\\t\\t
+				\end{bmatrix}=
+				t\begin{bmatrix}
+					0\\1\\1
+				\end{bmatrix}					
+			\]
+			Sehinggga matriks $P$ adalah:
+			\[
+				\begin{bmatrix}
+					1&0&0\\0&-1&1\\0&1&1
+				\end{bmatrix}							
+			\]
+		\end{itemize}
+		
+		\item Matriks diagonal $D$ adalah matriks yang entri diagonalnya diambil dari nilai-nilai eigen ($\lambda_1=2,\lambda_2=2,\lambda_3=4$):
+		\[
+			D=\begin{bmatrix}
+				2&0&0\\0&2&0\\0&0&4
+			\end{bmatrix}					
+		\]
+	\end{enumerate}
+\end{enumerate}

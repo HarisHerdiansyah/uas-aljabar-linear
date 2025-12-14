@@ -1,0 +1,114 @@
+% Pertemuan 13
+\section*{Pertemuan 13}
+\begin{enumerate}
+	\item Diketahui $W$ adalah himpunan semua vektor di $\mathbb{R}^3$ yang memenuhi persamaan linear homogen $x-2y+3z=0$.
+	\[W=\{(x,y,z)\in\mathbb{R}^3 \ | \ x-2y+3z=0\}\]
+	Buktikan bahwa $W$ adalah subruang dari $\mathbf{R}^3$.
+	
+	\item Diketahui $D$ adalah himpunan semua matriks diagonal berukuran $2\times2$. Matriks diagonal adalah matriks di mana entri di luar diagonal utama bernilai nol.
+	\[D = \left\{
+	\begin{bmatrix} a & 0 \\ 0 & b \end{bmatrix} \ 
+	\bigg| \ a, b \in \mathbb{R} 
+	\right\}\]
+	Buktikan bahwa $D$ adalah subruang dari ruang vektor $M_{2\times2}$.
+	
+	\item Diketahui $S$ adalah himpunan semua $P_2$ yang bernilai nol ketika $x=1$.
+	\[S=\{p(x)=ax^2+bx+c \ | \ p(1)=0\}\]
+	Buktikan bahwa $S$ adalah subruang dari $P_2$.
+\end{enumerate}
+
+Jawaban:
+\begin{enumerate}
+	\item $W=\{(x,y,z)\in\mathbb{R}^3 \ | \ x-2y+3z=0\}$
+	\begin{itemize}
+		\item Akan dibuktikan jika $W\neq\{\}$
+		Misal diambil vektor nol: $0 = (0,0,0)$. Substitusi ke persamaan
+		\[x-2y+3z=0\]
+		\[0-2(0)+3(0)=0\]
+		\[0=0\]
+		$\therefore W$ bukan himpunan kosong. 
+		\item Akan dibuktikan jika $W\in\mathbb{R}^3$
+		??
+		\item Akan dibuktikan jika $W$ tertutup pada penjumlahan $(\mathbf{u}+\mathbf{v} \in W)$.
+		Misal $\mathbf{u}=(x_1,y_1,z_1)$ dan $\mathbf{v}=(x_2,y_2,z_2)$.
+		\[\mathbf{u}+\mathbf{v}=0\]
+		\[(x_1+x_2)-2(y_1+y_2)+3(z_1+z_2)=0\]
+		\[(x_1-2y_1+3z_1)+(x_2-2y_2+3z_2)=0\]
+		\[0=0\]
+		$\therefore W$ tertutup pada penjumlahan.
+		\item Akan dibuktikan jika $W$ tertutup pada perkalian skalar.
+		\[k\mathbf{u}=0\]
+		\[k(x_1-2y_1+3z_1)=0\]
+		\[k(0)=0\]
+		\[0=0\]
+		$\therefore W$ tertutup pada perkalian skalar.\\
+		Sehingga $W$ adalah subruang di $\mathbb{R}^3$.
+	\end{itemize}
+	
+	\item $D = \left\{
+	\begin{bmatrix} a & 0 \\ 0 & b \end{bmatrix} \ 
+	\bigg| \ a, b \in \mathbb{R} 
+	\right\}$
+	\begin{itemize}
+		\item Akan dibuktikan jika $D\neq\{\}$
+		Misal diambil matriks nol, di mana $a=0$ dan $b=0$, maka:
+		\[\begin{bmatrix}
+			0 & 0 \\ 0 & 0
+		\end{bmatrix}\]
+		$\therefore D$ bukan himpunan kosong dan nilai di luar diagonal tetap nol.
+		\item $\therefore D \in M_{2\times2}$
+		\item Akan dibuktikan jika $D$ tertutup pada penjumlahan.
+		Misal diambil matriks $A$ dan $B$:
+		\[
+			A=\begin{bmatrix}
+				a_1 & 0 \\ 0 & a_2	
+			\end{bmatrix},
+			B=\begin{bmatrix}
+				b_1 & 0 \\ 0 & b_2
+			\end{bmatrix}						
+		\]
+		\[
+			A+B=\begin{bmatrix}
+				a_1 + a_2 & 0 + 0 \\ 0 + 0 & b_1 + b_2
+			\end{bmatrix}
+		\]
+		\[
+			A+B=\begin{bmatrix}
+				a_1 + a_2 & 0 \\ 0 & b_1 + b_2
+			\end{bmatrix}					
+		\]
+		$\therefore D$ tertutup pada penjumlahan.
+		\item Akan dibuktikan jika $D$ tertutup pada perkalian skalar.
+		\[
+			kA=k\begin{bmatrix}
+				a_1 & 0 \\ 0 & b_1
+			\end{bmatrix}
+			=\begin{bmatrix}
+				ka_1 & 0 \\ 0 & kb_1
+			\end{bmatrix}						
+		\]
+		$\therefore D$ tertutup pada perkalian skalar.\\
+		Sehingga $D$ adalah subruang di $M_{2\times2}$
+	\end{itemize}
+	
+	\item $S=\{p(x)=ax^2+bx+c \ | \ p(1)=0\}$
+	\begin{itemize}
+		\item Uji dengan polinomial nol.
+		\[0(x)=0x^2+0x+0=0\]
+		$\therefore$ Dengan nilai $x=1$, polinomial akan tetap bernilai nol sehingga $S$ bukan himpunan kosong.
+		\item $S$ adalah ruang vektor dengan derajat terbesar 2 sehingga $S \in P_2$.
+		\item Akan dibuktikan jika $D$ tertutup pada penjumlahan.
+		Misal diambil $p(x)$ dan $q(x)$ di mana $p(1)=0$ dan $q(1)=0$.
+		\[r(x)=(p+q)(x)=p(x)+q(x)\].
+		Periksa nilai di $x=1$:
+		\[r(1)=p(1)+q(1)=0+0=0\]
+		$\therefore S$ tertutup pada penjumlahan.
+		\item Akan dibuktikan jika $S$ tertutp pada perkalian skalar.
+		Misal $p(x) \in S$ dan $k \in \mathbb{R}$.
+		\[m(x)=(kp)(x)=k\cdotp(x)\]
+		Periksa nilai di $x=1$:
+		\[m(1)=k\cdotp(1)=k\cdot0=0\]
+		$\therefore S$ tertutup pada perkalian skalar.\\
+		Sehingga $S$ adalah subruang $P_2$.
+	\end{itemize}
+\end{enumerate}

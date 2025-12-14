@@ -1,0 +1,59 @@
+% Pertemuan 15
+\begin{enumerate}
+	% Halaman 38-39
+	\item Misalkan $u=(u_1,u_2)$ dan $v=(v_1,v_2)$ adalah vektor di $\mathbb{R}^2$ dan diketahui:
+	\[\langle u, v \rangle = 3u_1v_1 + 2u_2v_2\]
+	Jika diketahui vektor $\mathbf{a}=(2,-3)$ dan $\mathbf{b}=(1,4)$, hitunglah nilai $\langle a, b \rangle$ dengan definisi di atas.
+	
+	% Halaman 40
+	\item Pada ruang vektor $M_{2\times2}$ hasil kali dalam standar didefinisikan sebagai berikut:
+	\[\langle A,B \rangle=tr(A^{T}B)\]
+	Hitung $\langle A,B \rangle$ jika diketahui:
+	\[A=\begin{bmatrix}
+		1 & 2 \\ 0 & 1
+	\end{bmatrix},
+	B=\begin{bmatrix}
+		2 & 0 \\ 1 & -1	
+	\end{bmatrix}\]
+	
+	% Halaman 37
+	\item Diketahui basis $S=\{u_1,u_2\}$ untuk ruang vektor $\mathbb{R}^2$ dengan vektor:
+	\[u_1=(1,1) \text{ dan } u_2=(0,2)\]
+	Gunakan proses Gram-Schmidt untuk mengubhas basis $S$ menjadi basis ortogonal.
+\end{enumerate}
+
+Jawaban:
+\begin{enumerate}
+	\item $\langle \mathbf{a}, \mathbf{b} \rangle = 3(2)(1) + 2(-3)(4) = 6 + (-24) = -18$
+	\item Cari dahulu $A^T$
+	\[A^T = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix}\]
+	\[A^T B = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix} \begin{bmatrix} 2 & 0 \\ 1 & -1 \end{bmatrix} = \begin{bmatrix} (2+0) & (0+0) \\ (4+1) & (0-1) \end{bmatrix} = \begin{bmatrix} 2 & 0 \\ 5 & -1 \end{bmatrix}\]
+	\[\text{tr}(A^T B) = 2 + (-1) = 1\]
+	
+	\item
+	\begin{enumerate}
+		\renewcommand{\labelenumi}{\alph{enumi}.}
+		\item Tetapkan $u_1$ sebagai $v_1$
+		\[v_1=u_1\]
+		\item Hitung $v_2$
+		\[v_2=u_2-proj_{v_1}u_2\]
+		\[=u_2-\frac{\langle u_2,v_1 \rangle}{||v_1||^2}v_1\]
+		Hitung $\langle u_2,v_1 \rangle$:
+		\[u_2 \cdot v_1=(0)(1)+(2)(1)=2\]
+		Hitung $||v_1||^2$:
+		\[||v_1||^2=(\sqrt{1^2+1^2})^2=(\sqrt{2})^2=2\]
+		Hitung $proj_{v_1}u_2$:
+		\[proj_{v_1}u_2=\frac{2}{2}\cdot(1,2)\]
+		\[=(1,1)\]
+		Hitung persamaan akhir untuk mendapatkan $v_2$:
+		\[v_2=u_2-(1,1)\]
+		\[=(0,2)-(1,1)\]
+		\[=(0-1,2-1)\]
+		\[=(-1,1)\]
+		\item Didapat $v_1=(1,1)$ dan $v_2=(-1,1)$
+	\end{enumerate}
+	
+	Verifikasi ortogonalitas (ketika hasil kali titik bernilai nol):
+	\[\langle v_1, v_2 \rangle=(1)(-1)+(1)(1)\]
+	\[=-1+1=0\]
+\end{enumerate}

@@ -1,0 +1,43 @@
+% Pertemuan 12
+\section*{Pertemuan 12}
+\begin{enumerate}
+	\item Misalkan $V$ adalah himpunan semua pasangan bilangan real $(x, y)$ di $\mathbb{R}^2$. Operasi penjumlahan didefinisikan secara standar, yaitu:
+	\[(x_1, y_1) + (x_2, y_2) = (x_1+x_2, \ y_1+y_2)\]
+	Namun, operasi perkalian skalar didefinsikan sebagai berikut:
+	\[k(x, y) = (kx, 0)\]
+	Tentukan apakah $V$ merupakan ruang vektor atau bukan
+	
+	\item Misalkan $W$ adalah himpunan semua matriks $2\times2$ di mana $tr(M)=1$.
+	\[W = \left\{ \begin{bmatrix} a & b \\ c & d \end{bmatrix} \in M_{2\times2} \ \bigg| \ a + d = 1 \right\}\]
+	Dengan operasi penjumlahan dan perkalian skalar standar matriks, apakah himpunan $W$ merupakan ruang vektor atau bukan
+\end{enumerate}
+
+Jawaban:
+\begin{enumerate}
+	\item Himpunan $V$ bukanlah ruang vektor. Himpunan $V$ tidak memenuhi aksioma $1\mathbf{u}=\mathbf{u}$.\\
+	Misalkan $\mathbf{u}=(u_1,u_2)$:
+	\[1\mathbf{u}=\mathbf{u}\]
+	\[1(u_1,u_2)=(u_1,u_2)\]
+	\[(u_1,u_2)\neq(u_1,0)\]
+	
+	\item Himpunan $W$ bukanlah ruang vektor. Himpunan $W$ tidak memenuhi aksioma $kV\in\mathbb{R}$.\\
+	Ambil sembarang $V$ dan $k$ dengan $k\neq1$
+	\[
+		A=\begin{bmatrix}
+			1 & 0 \\ 0 & 0
+		\end{bmatrix},
+		k=2		
+	\]
+	\[
+		kA=2\cdot\begin{bmatrix}
+			2(1) & 2(0) \\ 2(0) & 2(0)
+		\end{bmatrix}
+	\]
+	\[
+		kA=\begin{bmatrix}
+			2 & 0 \\ 0 & 0
+		\end{bmatrix}		
+	\]
+	\[tr(kA)=2+0=2\]
+	Himpunan $W$ hanya akan memiliki $tr(M)=1$ jika dan hanya jika $k=1$ sedangkan hal tersebut tidak memenuhi untuk $k\in\mathbb{R}$
+\end{enumerate}
