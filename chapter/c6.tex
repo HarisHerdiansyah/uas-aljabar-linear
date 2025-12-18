@@ -1,7 +1,7 @@
 % Pertemuan 6
 \section*{Pertemuan 6}
 \begin{enumerate}
-	\item Cari solusi non-trivial dari sistem homogen berikut
+	\item Cari solusi non-trivial dari sistem persamaana linear homogen berikut
 	\[
 		\begin{cases}
 			2x - y + 3z - w = 0 \\
@@ -22,7 +22,8 @@
 
 Jawaban:
 \begin{enumerate}
-	\item Bentuk matriks koefisien
+	\item Sistem persamaan linear homogen adalah sistem persamaan yang semua nilai konstantanya adalah nol. SPL homogen memiliki dua sifat pada solusi persamaannya, solusi trivial dan solusi non-trivial. Solusi trivial adalah solusi di mana solusi bernilai nol ketika semua variabel juga bernilai nol yang berarti dapat dikatakan SPL konsisten (nilai masukkan nol akan menghasilkan keluaran nol). Solusi non-trivial adalah kondisi ketika SPL tidak konsisten, di mana ketika terdapat nilai selain nol menghasilkan keluaran nilai nol sehingga dikatakan SPL memilika tak hingga solusi.\\
+	Bentuk augmented matrix, pada SPL homogen, konstanta tidak perlu diikutsertakan menjadi kolom matriks paling kanan:
 	\[
 		\begin{bmatrix}
 			2 & -1 & 3 & -1 \\
@@ -78,12 +79,12 @@ Jawaban:
 			0 & 0 & 0 & 0
 		\end{bmatrix}
 	\]
-	Bentuk persamaan dari hasil OBE:
+	Bentuk persamaan dari hasil operasi baris elementer:
 	\[x+z+\frac{1}{7}w=0\]
 	\[x=-z-\frac{1}{7}w\]
 	\[y-z+\frac{9}{7}w=0\]
 	\[y=z-\frac{9}{7}w\]
-	Misal $z=s$ dan $w=t$:
+	Dapat dilihat kolom ketiga dan keempat tidak memiliki pivot sehingga $z$ dan $w$ tidak memiliki solusi unik, variabel inilah yang kemudian sebagai variabel bebas karena bisa mengandung tak hingga solusi. Misal $z=s$ dan $w=t$:
 	\[x=-s-\frac{1}{7}t\]
 	\[y=s-\frac{9}{7}t\]
 	Bentuk solusi persamaan:
@@ -134,7 +135,7 @@ Jawaban:
 			0 & 1 & -4 & 5
 		\end{array} 
 		\right]
-		\xrightarrow{B2 \xleftrightarrow B3}
+		\xrightarrow{\text{B2}\leftrightarrow\text{B3}}
 		\left[ 
 		\begin{array}{ccc|c} 
 			1 & 1 & 1 & 14 \\ 

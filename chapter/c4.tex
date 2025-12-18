@@ -27,9 +27,9 @@
 	\]
 \end{enumerate}
 
-Jawab:
+\textbf{Jawaban:}
 \begin{enumerate}
-	\item 
+	\item Minor adalah nilai determinan dari submatriks setelah mengeliminasi baris dan kolom tertentu, misalnya dicari minor di baris-$i$ dan kolom-$j$ ($M_{ij}$), maka kita "eliminasi" baris-$i$ dan kolom-$j$ lalu hitung determinan submatriksnya. Kofaktor sendiri adalah nilai yang melibatkan hasil perhitungan minor yang didapat melalui persamaan: $C_{ij}=(-1)^{i+j} \cdot M_{ij}$.
 	\begin{align*}
 	M_{11}&=\begin{vmatrix} -9 & 1 \\ 5 & 0 \end{vmatrix} = (-9)(0) - (1)(5) = -5; & C_{11}&=(-1)^{1+1}(-5)=-5 \\
 	M_{12}&=\begin{vmatrix} -4 & 1 \\ -7 & 0 \end{vmatrix} = (-4)(0) - (1)(-7) = 7; & C_{12}&=(-1)^{1+2}(7)=-7 \\
@@ -41,7 +41,7 @@ Jawab:
 	M_{32}&=\begin{vmatrix} 8 & 0 \\ -4 & 1 \end{vmatrix} = (8)(1) - (0)(-4) = 8; & C_{32}&=(-1)^{3+2}(8)=-8 \\
 	M_{33}&=\begin{vmatrix} 8 & 3 \\ -4 & -9 \end{vmatrix} = (8)(-9) - (3)(-4) = -72 - (-12) = -60; & C_{33}&=(-1)^{3+3}(-60)=-60
 	\end{align*}
-	\item Metode Sarrus
+	\item Untuk mencari determinan matriks $3\times3$, masih memungkinkan untuk menggunakan metode sarrus, di mana perhitungan dilakukan dengan mengalikan diagonal ke arah kanan bawah untuk tiga kolom pertama dari sebelah kiri dan mengalikan diagonal ke arah kiri bawah untuk tiga kolom terakhir dari sebelah kanan.
 	\[
 		det(B)=
 		\begin{array}{|ccc|cc|}
@@ -56,7 +56,8 @@ Jawab:
 	\[det(B)=(45 + 256 + 42) - (-168 + 20 - 144)\]
 	\[det(B)=343-(-292)\]
 	\[det(B)=635\]
-	\item Metode Ekspansi Kofaktor
+	\item Soal ini dihitung menggunakan metode ekspansi kofaktor, di mana determinan dihitung dengan melibatkan konsep minor dan kofaktor, pertama dipilh satu baris dan satu kolom yang akan dieliminasi, lalu cari nilai kofaktornya dan hasil akrhinya adalah determinan dari matriks terkait.\\
+	Metode ekspansi kofaktor juga digunakan untuk mencari nilai eigen, misal diambil baris 1 dan kolom 1.
 	\[
 		(1-\lambda)\begin{vmatrix} 4-\lambda & 2 \\ -1 & 3-\lambda \end{vmatrix} -
 		2\begin{vmatrix} 2 & 2 \\ 1 & 3-\lambda \end{vmatrix} + 
@@ -86,7 +87,7 @@ Jawab:
 	\[\lambda(\lambda - 4)(\lambda - 4) = 0\]
 	\[\lambda(\lambda - 4)^2 = 0\]
 	$\therefore$ Sehingga didapat nilai-nilai eigennya adalah $\lambda_{1}=0,\lambda_{2}=4,\lambda_{3}=4$
-	\item Metode Ekspansi Kofaktor terhadap Baris 1
+	\item Implementasi metode ekspansi kofaktor pada matriks biasa di baris 1 dan kolom 1.
 	\[
 		det(R)=
 		2\begin{vmatrix} -8 & 0 \\ 8 & 0 \end{vmatrix} +

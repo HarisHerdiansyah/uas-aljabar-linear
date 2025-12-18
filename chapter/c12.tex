@@ -12,7 +12,31 @@
 	Dengan operasi penjumlahan dan perkalian skalar standar matriks, apakah himpunan $W$ merupakan ruang vektor atau bukan
 \end{enumerate}
 
-Jawaban:
+Jawaban:\\
+Sebuah ruang vektor harus memenuhi sepuluh aksioma ruang vektor yang diantaranya:
+\begin{itemize}
+	\item Tertutup pada penjumlahan
+	\[u,v \in V:u+v \in V\]
+	\item Komutatif pada penjumlahan
+	\[u,v \in V:u+v = v+u\]
+	\item Asosiatif pada penjumlahan
+	\[u,v,w \in V:(u+v)+w = u+(v+w)\]
+	\item Elemen identitas, penjumlahan dengan vektor nol tidak akan mengubah nilai
+	\[0,v \in V:0+v = v+0 = v\]
+	\item Tertutup pada perkalian skalar
+	\[k \in \mathbb{R}, v \in V: kv \in V\]
+	\item Distributif terhadap penjumlahan vektor
+	\[k \in \mathbb{R}, u,v \in V: k(u+v) = ku + kv\]
+	\item Distributif terhadap penjumlahan skalar
+	\[k,l \in \mathbb{R}, u \in V: (k+l)u = ku + lu\]
+	\item Asosiatif terhadap perkalian skalar
+	\[k,l \in \mathbb{R}, u \in V: k(lv) = (kl)v\]
+	\item Identitas skalar
+	\[v \in V: 1v=v\]
+	\item Invers penjumlahan
+	\[v, -v \in V: v+(-v)=0\]
+\end{itemize}
+Jika ada salah satu aksioma yang tidak terpenuhi, maka himpunan yang diketahui bukan lagi ruang vektor.
 \begin{enumerate}
 	\item Himpunan $V$ bukanlah ruang vektor. Himpunan $V$ tidak memenuhi aksioma $1\mathbf{u}=\mathbf{u}$.\\
 	Misalkan $\mathbf{u}=(u_1,u_2)$:

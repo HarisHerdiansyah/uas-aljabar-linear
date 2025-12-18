@@ -26,7 +26,8 @@
 
 Jawab:
 \begin{enumerate}
-	\item Bentuk augmented matrix:
+	\item Sistem persamaan linear, dapat diselesaikan dengan membentuk matriks lalu melakukan operasi baris elementer, untuk menyelesaikan SPL dengan matriks, susun terlebih dahulu augmented matrix atau matriks yang diperluas dengan melibatkan nilai konstantanya. \\
+	Bentuk augmented matrix dari SPL yang diketahui:
 	\[
 		\left[
 		\begin{array}{cccc|c}
@@ -36,7 +37,7 @@ Jawab:
 		\end{array}
 		\right]
 	\]
-	Lakukan operasi baris elementer:
+	Lakukan operasi baris elementer sampai ke bentuk matriks eselon baris tereduksi:
 	\[
 		\left[
 		\begin{array}{cccc|c}
@@ -84,7 +85,7 @@ Jawab:
 	\[x_{4} = 2\]
 	\[x_{1} + 2x_{2} - x_{3} = -2\]
 	\[x_{1} = -2 - 2x_{2} + x_{3}\]
-	Misal $x_{2} = s$ dan $x_{3} = t$, maka:
+	Dapat dilihat kolom kedua (representasi $x_2$) dan kolom ketiga representasi ($x_3$) tidak memiliki pivot (1 utama) sehingga dikatan sebagai variabel bebas. Variabel bebas ini misalkan dengan solusi parametrik, misal $x_{2} = s$ dan $x_{3} = t$, maka:
 	\[x_{1} = -2 - 2s + t\]
 	Solusi persamaan:
 	\[
@@ -120,7 +121,7 @@ Jawab:
 			1 & 1 & k \\ 1 & k & 1 \\ k & 1 & 1
 		\end{bmatrix}			
 	\]
-	Hitung determinan:
+	Hitung determinan dengan metode ekspansi kofaktor:
 	\[det(A)=1(k-1)-1(1-k)+k(1-k^2)\]
 	\[=k-1-1+k+k+k^3\]
 	\[=-k^3+3k-2\]

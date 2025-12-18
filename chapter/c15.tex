@@ -1,4 +1,5 @@
 % Pertemuan 15
+\section*{Pertemuan 15}
 \begin{enumerate}
 	% Halaman 38-39
 	\item Misalkan $u=(u_1,u_2)$ dan $v=(v_1,v_2)$ adalah vektor di $\mathbb{R}^2$ dan diketahui:
@@ -22,15 +23,17 @@
 	Gunakan proses Gram-Schmidt untuk mengubhas basis $S$ menjadi basis ortogonal.
 \end{enumerate}
 
-Jawaban:
+\textbf{Jawaban:}
 \begin{enumerate}
-	\item $\langle \mathbf{a}, \mathbf{b} \rangle = 3(2)(1) + 2(-3)(4) = 6 + (-24) = -18$
+	\item $\langle a,b \rangle$ adalah notasi untuk ruang hasil kali dalam, di mana persamaan tersebut mendefinisikan operasi kali titik (\emph{dot product}) dengan perluasan aturan tertentu.
+	\[\langle \mathbf{a}, \mathbf{b} \rangle = 3(2)(1) + 2(-3)(4) = 6 + (-24) = -18\]
 	\item Cari dahulu $A^T$
 	\[A^T = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix}\]
 	\[A^T B = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix} \begin{bmatrix} 2 & 0 \\ 1 & -1 \end{bmatrix} = \begin{bmatrix} (2+0) & (0+0) \\ (4+1) & (0-1) \end{bmatrix} = \begin{bmatrix} 2 & 0 \\ 5 & -1 \end{bmatrix}\]
 	\[\text{tr}(A^T B) = 2 + (-1) = 1\]
 	
-	\item
+	\item Basis ortogonal adalah basis di mana setiap vektornya saling tegak lurus. Vektor yang saling tegak lurus ini akan bernilai nol ketika dioperasikan dengan kali titik (\emph{dot product}). Adapun, basis ortonormal di mana setiap basisnya saling ortogonal dan panjang vektornya adalah 1.\\
+	Gram-schmidt adalah metode yang melibatkan konsep vektor proyeksi untuk membuat sekumpulan vektor yang bebas linear menjaid basis ortogonal.
 	\begin{enumerate}
 		\renewcommand{\labelenumi}{\alph{enumi}.}
 		\item Tetapkan $u_1$ sebagai $v_1$

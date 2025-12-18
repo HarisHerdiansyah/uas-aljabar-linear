@@ -23,10 +23,16 @@
 
 Jawaban:
 \begin{enumerate}
-	\item
+	\item Ruang eigen adalah ruang vektor hasil transformasi yang melibatkan nilai-nilai eigen, di mana hasil transformasi hanya berubah secara skalar. Persamaan karakteristik adalah persamaan muncul melalui persamaan transformasi linear:
+	\[Av = \lambda{v}\]
+	\[Av - \lambda{v} = 0\]
+	\[A(v - I\lambda) = 0\]
+	Dapat dilihat, nilai $\lambda$ dikalikan dengan $I$ atau matriks identitas karena pada dasarnya lambda adalah skalar. Persamaan karakteristik adalah determinan dari $A(v - I\lambda)$ di mana determinan harus bernilai nol.\\
+	Nilai eigen adalah nilai-nilai yang memenuhi persamaan untuk membangun basis eigen.\\
+	Basis ruang eigen adalah vektor yang bersesuaian dengan setiap nilai eigen untuk membangun ruang eigen.
 	\begin{enumerate}
 		\renewcommand{\labelenumi}{\alph{enumi}.}
-		\item Persamaan karakteristik didapat dari 
+		\item Mencari persamaan karakteristik:
 		\[det\left(
 			\begin{bmatrix}
 				\lambda-4 & 0 & -1 \\ 2 & \lambda-1 & 0 \\ 2 & 0 & \lambda-1
@@ -45,7 +51,7 @@ Jawaban:
 		\item Basis ruang eigen
 	\end{enumerate}
 	
-	\item
+	\item Dalam konteks ruang eigen, matriks $P$ adalah matriks yang dibangun dari basis-basis ruang eigen sehingga memenuhi $A=PDP^{-1}$. Adapun matriks $D$ sendiri adalah matriks diagonal yang setiap nilai diagonalnya diambil dari nilai-nilai eigen.
 	\begin{enumerate}
 		\renewcommand{\labelenumi}{\alph{enumi}.}
 		\item Matriks $P$ dibangun dari vektor-vektor eigen sehingga cari terlebih dahulu vektor-vektor eigennya.

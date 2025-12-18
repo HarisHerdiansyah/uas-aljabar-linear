@@ -38,8 +38,8 @@ Tentukan hasil dari ekspresi berikut jika matriks terdefinsi:
 	\item $D^{T}E^{T}-(ED)^{T}$
 \end{enumerate}
 
-Jawab: \\
-Untuk memudah perhitungan selanjutnya, cari terlebih dahulu transpose dari setiap matriks.
+\textbf{Jawaban:} \\
+Untuk memudahkan perhitungan selanjutnya, cari terlebih dahulu transpose dari setiap matriks. \textbf{Transpose matriks} adalah bentuk matriks di mana posisi baris ditukar posisi ke bawah menjadi kolom, begitu juga untuk posisi kolom ditukar posisi ke samping menjadi baris, hal ini juga akan mengubah ordo matriks jika bukan matriks persegi.
 
 \[
 	A^{T} = \begin{bmatrix}
@@ -65,8 +65,22 @@ Untuk memudah perhitungan selanjutnya, cari terlebih dahulu transpose dari setia
 \]
 
 \begin{enumerate}
-	\item Karena perkalian matriks tidak berlaku sifat komutatif, matriks B dan C tidak dapat dioperasikan sehingga tidak terdefinisi.
-	\item 
+	\item Hitung $A^{T}A$:
+	\[A^T A = \begin{bmatrix} 2 & -4 & 5 \\ 1 & 3 & 0 \end{bmatrix} \begin{bmatrix} 2 & 1 \\ -4 & 3 \\ 5 & 0 \end{bmatrix} = \begin{bmatrix} (4+16+25) & (2-12+0) \\ (2-12+0) & (1+9+0) \end{bmatrix} = \begin{bmatrix} 45 & -10 \\ -10 & 10 \end{bmatrix}\]
+	
+	Hitung $CC^T$:	
+	\[C C^T = \begin{bmatrix} 4 & -2 & 0 \\ 1 & 7 & 3 \end{bmatrix} \begin{bmatrix} 4 & 1 \\ -2 & 7 \\ 0 & 3 \end{bmatrix} = \begin{bmatrix} (16+4+0) & (4-14+0) \\ (4-14+0) & (1+49+9) \end{bmatrix} = \begin{bmatrix} 20 & -10 \\ -10 & 59 \end{bmatrix}\]
+	
+	Hitung $B(CC^T)$:
+	\[B^T (C C^T) = \begin{bmatrix} -1 & 2 \\ 5 & 4 \end{bmatrix} \begin{bmatrix} 20 & -10 \\ -10 & 59 \end{bmatrix} = \begin{bmatrix} (-20-20) & (10+118) \\ (100-40) & (-50+236) \end{bmatrix} = \begin{bmatrix} -40 & 128 \\ 60 & 186 \end{bmatrix}\]
+	
+	Hitung hasil akhir:
+	\[\begin{bmatrix} -40 & 128 \\ 60 & 186 \end{bmatrix} - \begin{bmatrix} 45 & -10 \\ -10 & 10 \end{bmatrix} = \begin{bmatrix} -85 & 138 \\ 70 & 176 \end{bmatrix}\]
+	
+	Dapat dilihat bahwa perkalian matriks menghasil ordo baru yang bernilai baris matriks pertama $\times$ kolom matriks kedua.
+	
+	\item
+	Hitung dulu $D^{T}E^{T}$:
 	\[
 		D^{T}E^{T} = \begin{bmatrix}
 			7 & -2 & 1 \\ 1 & 0 & 6 \\ 3 & 4 & 9 
@@ -94,6 +108,8 @@ Untuk memudah perhitungan selanjutnya, cari terlebih dahulu transpose dari setia
 			-13 & 5 & -9 \\ 45 & 8 & 35 \\ 63 & 35 & 67
 		\end{bmatrix}
 	\]
+	
+	Hitung $ED$:
 	\[
 		ED = \begin{bmatrix}
 			-3 & 0 & 8 \\ 2 & 5 & 1 \\ -1 & 4 & 6
@@ -121,6 +137,8 @@ Untuk memudah perhitungan selanjutnya, cari terlebih dahulu transpose dari setia
 			-13 & 45 & 63 \\ 5 & 8 & 35 \\ -9 & 35 & 67
 		\end{bmatrix}			
 	\]
+	
+	Hitung hasil akhir:
 	\[
 		D^{T}E^{T}-(ED)^{T} = \begin{bmatrix}
 			-13 & 5 & -9 \\ 45 & 8 & 35 \\ 63 & 35 & 67
